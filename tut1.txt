@@ -1,0 +1,36 @@
+Normal of sphere
+N = deltaf / ||delta f|| =
+(2x, 2y, 2z)^T / sqr(4x^2 + 4y^2 + 4z^2)
+
+
+parametric sphere
+x^2 + y^2 + z^2 = f(x,y,z) = R^2
+
+implicit sphere
+[cos \theta cos \fi
+ sin \theta cos \fi
+ sin \fi]
+
+works for all dimensions
+this is for 3 dimensions
+ N x e_0 = T_1
+ N x T_1 = T_2
+ .
+ .
+ .
+ N x T_(n-1) = T_n
+
+ \dF / \d\theta = [-sin \theta cos \fi
+ 					cos \theta cos \fi
+ 					0
+ 					]
+
+\dF / \d\theta = [-cos \theta sin \fi
+				   -sin \theta sin \fi
+				   cos \fi]
+
+N = \d F / \theta x \d F / \fi / (||\d F / \theta x \d F / \fi||)
+
+
+cylinder 
+

@@ -1,0 +1,18 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Yu-Ching Chen\\g3yuch\\999780651}
+\title{CSC418\\A1 REPORT}
+\begin{document}
+\maketitle
+\section*{Drawing the penguin}
+My penguin was drawn by creating functions for drawing shapes. Rectangles for the feet and leg under beak, circles for the joints and eyes and polygons for torso, beak and head. These are drawn to have the center of the shape initialized at origin (0,0). The hierarchy of drawing these shapes are Torso as the highest parent, where any transformation done to the body will be done to all other shapes. Under the body there are 4 children that are independent of each other, and they are the head, arm and the two legs. Under the Head there are the eyes and beak and under beak. Under the legs there are the feet. I also drew the joints within the legs, arm and head. I started by drawing the lowest child first because any transformation the the parent will apply to the children, but any transformation done the the children will be independent from the children. Ex (I created the feet first, then rotated it and translated it before drawing the legs).
+
+Also since opengl calculates it as matrices, all transformation and multiplied backwards.
+
+\section*{Animation}
+To animate the penguin, I first created variables for the rotations of the head, arm, legs, feet and body, the x and y of the whole penguin and the y of the top beak. For rotations I first translated the object's joint or point of rotation to the origin(0,0). Rotated the object then used the value of the created variable to rotate along the z axis. Then I translated the shape back where I translated it from. For translation, I just translated the object based off the value of the created variable after the other translation because they are commutative.
+\end{document}

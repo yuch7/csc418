@@ -1,0 +1,233 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Yu-Ching Chen\\g3yuch\\999780651}
+\title{A1 Part 1}
+\begin{document}
+\maketitle
+\section{}
+${}$
+
+Tangent vector is the derivative
+
+$x(t) = 4cos(2\pi t) +\frac{1}{16} * cos (32 \pi t)$
+
+$x'(t) = - 8 \pi sin(2 \pi t) - 2 \pi sin(32 \pi t)$
+\\
+
+$y(t) = 2 sin(2 \pi t) + \frac{1}{16} sin(32 \pi t)$
+
+$y'(t) = -4cos(2 \pi t) - 2 cos(32 \pi t)$
+\\
+
+Normal is perpendicular to the tangent
+
+$x(t) = \frac{1}{8 \pi sin(2 \pi t)} + \frac{1}{2 \pi sin(32 \pi t)}$
+
+$y(t) = \frac{1}{4 cos(2 \pi t) } + \frac{1}{2cos(32 \pi t)}$
+\\
+
+It is symmetrical on the x axis, not the y. Wolfram Alpha told me so.
+\\
+
+Integral of the immediate change in distance will give you the perimeter.
+
+$\int_0^1 \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt$
+\\
+
+Instead you can do the approximation by taking the summation of the change in values
+\\
+
+\section{}
+${}$
+
+Then the area of the donut is the area of the circle minus the area of the inner circle.
+
+$\pi r_1^2 - \pi r_2^2$
+\\
+
+There can be 4 intersections of a donut.
+\\
+
+With the equation of the line equal to the equation of the outer circle and equal to the inner circle. They will output each point they intersect. The number of solutions will also be the number of intersections to the donut.
+\\
+
+On a non-uniform scale, the number of intersection will stay the same, because intersecting a circle with a line will have to intersect again to leave the line. The location of intersection will be also scaled by the same amount sy and sx.
+\\
+
+If only applied to the donut, the number of intersection can change if the donut is scaled smaller so that the line doesn't intersect the inner or outer circle anymore. Scaling the circle will also change the point of intersection.
+
+\section{}
+${}$
+
+a) Not commutative, Translate x uniform scale $\neq$ uniform scale x Translate
+
+$
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+\begin{bmatrix}
+a&0&0\\
+0&a&0\\
+0&0&1
+\end{bmatrix} = \begin{bmatrix}
+a&0&x\\
+0&a&y\\
+0&0&1
+\end{bmatrix}$
+
+$
+\begin{bmatrix}
+a&0&0\\
+0&a&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+ = \begin{bmatrix}
+a&0&ax\\
+0&a&ay\\
+0&0&1
+\end{bmatrix}$
+\\
+
+b) Not commutative, Translate x scale $\neq$ scale x Translate
+
+$
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+\begin{bmatrix}
+a&0&0\\
+0&b&0\\
+0&0&1
+\end{bmatrix} = \begin{bmatrix}
+a&0&x\\
+0&b&y\\
+0&0&1
+\end{bmatrix}$
+
+$
+\begin{bmatrix}
+a&0&0\\
+0&b&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+ = \begin{bmatrix}
+a&0&ax\\
+0&b&by\\
+0&0&1
+\end{bmatrix}$
+\\
+
+c) Not commutative
+
+$\begin{bmatrix}
+cos\theta &sin\theta &0\\
+-sin\theta &cos\theta& 0\\
+0 &0& 1
+\end{bmatrix}
+\begin{bmatrix}
+a&0&0\\
+0&b&0\\
+0&0&1
+\end{bmatrix} = \begin{bmatrix}
+acos\theta&bsin\theta&0\\
+-a sin\theta&..&..\\
+..&..&..
+\end{bmatrix}$
+
+$
+\begin{bmatrix}
+a&0&0\\
+0&b&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+cos\theta &sin\theta &0\\
+-sin\theta &cos\theta& 0\\
+0 &0& 1
+\end{bmatrix}
+ = \begin{bmatrix}
+acos\theta&asin\theta&..\\
+..&..&..\\
+..&..&..
+\end{bmatrix}$
+\\
+
+d) Not commutative because in a polygon, if you scale larger from a point outside the polygon, all the points on the polygon will scale away from the point in one direction, whereas if it was in the polygon, it will scale in different directions. So if you first scale from the outside the polygon, the polygon could scale away from the second point of scale. And if you do the second point first where its within the polygon, it will not scale away from the first point, it might even scale so that the first point is within the polygon. 
+\\
+\pagebreak
+
+e) Not commutative
+
+$
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+\begin{bmatrix}
+1&a&0\\
+1&1&0\\
+0&0&1
+\end{bmatrix} = \begin{bmatrix}
+1&a&x\\
+..&..&..\\
+..&..&..
+\end{bmatrix}$
+
+$
+\begin{bmatrix}
+1&a&0\\
+1&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+1 &0 &x\\
+0 &1& y\\
+0 &0& 1
+\end{bmatrix}
+ = \begin{bmatrix}
+1&a&x+ay\\
+..&..&..\\
+..&..&..
+\end{bmatrix}$
+
+\section{}
+${}$
+
+For the following the lines are defined as the vector crossing the two points and the x is greater or equal than the less valued x and less or equal than the greater valued x and same with the y
+\\
+
+Create the 3 vectors parallel to each line from the triangle, if any vector doesn't intersect with the line then the point is outside of the triangle, if all 3 vectors intersect with any lines from the triangle, then it is within the triangle.
+\\
+
+For an edge, if the point is on the equation of the line, then it is on the edge of the triangle.
+\\
+
+By taking two verticies on an all sides convex quadrilateral that are not connected by an edge and creating an edge from a line through both of the points, on a all side concave quadrilateral, you would take the vertex that is concave and create an edge to the vertex not connected by an edge.
+\\
+
+To triangulate any n sided polygon, all you have to do is create an edge from any 2 verticies that are separated by 1 vertex in between if all sides are convex, if concave then only the verticies that are concave you create edges.
+\\
+
+You can triangulate all polygons into verticies to see if the point is within the polygon based off the algorithm above to check if the point is within the vertex.
+
+
+\end{document}

@@ -1,0 +1,17 @@
+Yu-Ching Chen
+999780651
+g3yuch
+
+Penguin 3D report
+
+Drawing the Penguin:
+I made functions to draw legs, arms, hands, head, eyes, beak and feet. In these functions they used gl_begin quad to make surfaces of each object. and before creating each surface I first defined the normal of each surface, since each object is created at orgin the normal vectors were just parallel to the x, y and z axis. I split up the penguin in parts, body head arms and legs. I drew these as siblings. While hands are children to the arms, feet are children to legs, beak and eyes are children to the head.
+
+Different rendering style:
+Before the penguin gets drawn, it decides what rendering style to draw it as. For wireframe it drew lines. For outlined and solid it enabled depth so backfaces do not get drawn, but if it was outlined, it always redraws the shape in wireframe right after being drawn in solid using offset. For metallic and matte, it enables light0 and lighting to allow specular, ambient and diffuse of light. For mattalic i assumed a higher value for specular, diffuse and ambient reflection but a lower shininess value, while for matte i assumed a lower value for specular, diffuse and ambient reflection but a higher shininess value. The light position rotates in a circle around the window length.
+
+Animation:
+Keyframes are inputed with a time, with catmull rom interpolation, we interpolate the DOFs in between keyframes to make the animation look more smooth.
+
+Update Keyframe:
+Update keyframe function gets the current DOFs and saves it. It also increases the maxKeyframeValue if the updated keyframe is greater than the current maxkeyframevalue.
